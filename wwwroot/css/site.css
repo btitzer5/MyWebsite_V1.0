@@ -1,0 +1,71 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+body{
+    background-color: #232222;
+    color: #cbcbcb;
+    font-family:Arial, sans-serif;
+    border: none;
+    outline: none;
+}
+
+/* Optional: style links to be readable on dark background */
+a {
+    color: #d0d0d0; /* light grey */
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #ffffff; /* brighter on hover */
+    }
+
+/* Optional: headings slightly brighter */
+h1, h2, h3, h4, h5, h6 {
+    color: #dfdbdb;
+}
+
+.navbar {
+    background-color: #111;
+    color: #dfdbdb;
+    border-bottom: none;
+    margin: 0;
+}
+/* Navbar links */
+.navbar a {
+    color: #eee;             /* off-white links */
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #fff;             /* brighter on hover */
+}

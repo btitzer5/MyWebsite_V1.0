@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<head>
+    <style>
+        html, body {
+            height: 100%; /*Body fill viewport*/
+            margin: 0; /*remove margin*/
+        }
+    
+        .hero-header{
+            display: flex; /*enable flexbox*/
+            flex-direction: column; /*stack children vertically*/
+            justify-content: center; /*center horizontally*/
+            align-items: center; /*center vertically*/
+            text-align: center; /*center inside header*/
+            margin-top: 20vh;
+            font-size: 12rem;
+        }
+
+        .hero-header-2{
+            
+            margin-top: 1rem;
+            font-size: 1.5rem;
+        }
+    </style>
+    
+</head>
+    <div class="hero-header">
+    <h1 class="display-4" style="color: #cbcbcb">Benjamin Titzer</h1>
+    <h2 class="display-4 hero-header-2" style="color: #cbcbcb">bctitzer@gmail.com</h2>
+    </div>
+
