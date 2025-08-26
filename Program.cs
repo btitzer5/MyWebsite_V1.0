@@ -7,7 +7,7 @@ builder.WebHost.ConfigureKestrel(options =>
     options.ListenAnyIP(int.Parse(port));
 });
 
-Add services to the container.
+//Add services to the container.
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
