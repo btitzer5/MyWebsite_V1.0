@@ -208,6 +208,40 @@ h1, h2, h3, h4, h5, h6 { color: #dfdbdb; font-family: var(--font-heading); }
   opacity: 0.9;
 }
 
+.hero-about {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 2;
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+    color: #d7d7d7;
+    opacity: 0.9;
+}
+
+.hero-headshot {
+    display: flex;
+    justify-content: center;
+    margin: 0.75rem 0 1rem 0;
+}
+
+.headshot {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.15);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.15);
+}
+
+@media (min-width: 992px) {
+    .headshot {
+        width: 160px;
+        height: 160px;
+    }
+}
+
 /* Mobile */
 @media (max-width: 767px) {
   .navbar-nav { margin-top: 0.5rem; }
