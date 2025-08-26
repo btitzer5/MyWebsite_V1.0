@@ -3,44 +3,80 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< Updated upstream
     <title>@ViewData["Title"] - MyWebsite_V1._0</title>
+=======
+    
+>>>>>>> Stashed changes
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MyWebsite_V1._0.styles.css" asp-append-version="true" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-1g navbar-dark" style="background-color: #111; margin-right: 0; margin-left: 0">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Benjamin Titzer</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Contact</a>
-                        </li>
-                    </ul>
+<body class="theme-blue">
+    <!-- Horizontal Glass Navbar -->
+    <nav class="horizontal-navbar">
+        <div class="glass-effect">
+            <div class="container-fluid navbar-container ps-0 pe-3">
+                <div class="d-flex align-items-center gap-2 w-100">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+                            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-page="/Index">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-page="/Index">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container main-content">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        // Lightweight parallax for background depth (mouse-based)
+        (function () {
+            const root = document.documentElement;
+            let px = 0, py = 0, tx = 0, ty = 0, raf = null;
+
+            function loop() {
+                px += (tx - px) * 0.08;
+                py += (ty - py) * 0.08;
+                root.style.setProperty('--px', px.toFixed(2));
+                root.style.setProperty('--py', py.toFixed(2));
+                raf = requestAnimationFrame(loop);
+            }
+
+            window.addEventListener('mousemove', (e) => {
+                const cx = window.innerWidth / 2;
+                const cy = window.innerHeight / 2;
+                tx = (e.clientX - cx) / cx;
+                ty = (e.clientY - cy) / cy;
+                if (!raf) raf = requestAnimationFrame(loop);
+            }, { passive: true });
+
+            window.addEventListener('mouseleave', () => { tx = 0; ty = 0; });
+        })();
+    </script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
