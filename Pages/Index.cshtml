@@ -9,3 +9,46 @@
     <h2 class="hero-subtitle">contact@benjamintitzer.com</h2>
 </div>
 
+<section class="portfolio">
+    <h3 class="section-title">Portfolio</h3>
+
+    <div class="portfolio-grid">
+        @foreach (var p in Model.Projects)
+        {
+            <article class="project-card">
+                <a class="project-link" href="@(p.Url ?? p.RepoUrl ?? "#")" target="_blank" rel="noopener">
+                    <div class="project-thumb @(string.IsNullOrWhiteSpace(p.ImageUrl) ? "no-image" : "")"
+                         style="@(string.IsNullOrWhiteSpace(p.ImageUrl) ? "" : $"background-image:url('{p.ImageUrl}')")">
+                    </div>
+                    <div class="project-body">
+                        <h4 class="project-title">@p.Title</h4>
+                        @if (!string.IsNullOrWhiteSpace(p.Description))
+                        {
+                            <p class="project-desc">@p.Description</p>
+                        }
+                        @if (p.Tech is { Length: > 0 })
+                        {
+                            <ul class="project-tags">
+                                @foreach (var t in p.Tech!)
+                                {
+                                    <li>@t</li>
+                                }
+                            </ul>
+                        }
+                    </div>
+                </a>
+                <div class="project-actions">
+                    @if (!string.IsNullOrWhiteSpace(p.Url))
+                    {
+                        <a class="btn-link" href="@p.Url" target="_blank" rel="noopener">Live</a>
+                    }
+                    @if (!string.IsNullOrWhiteSpace(p.RepoUrl))
+                    {
+                        <a class="btn-link" href="@p.RepoUrl" target="_blank" rel="noopener">Source</a>
+                    }
+                </div>
+            </article>
+        }
+    </div>
+</section>
+

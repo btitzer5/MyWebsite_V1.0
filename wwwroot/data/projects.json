@@ -1,0 +1,11 @@
+[
+  {
+    "title": "My Portfolio",
+    "description": "Personal website with glass UI and parallax background.",
+    "url": "/",
+    "repoUrl": "https://github.com/btitzer5/MyWebsite_V1.0",
+    "imageUrl": "/img/thumb-portfolio.png",
+    "tech": ["ASP.NET Core", "Razor Pages", "CSS"]
+  }
+  
+]

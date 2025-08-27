@@ -242,9 +242,111 @@ h1, h2, h3, h4, h5, h6 { color: #dfdbdb; font-family: var(--font-heading); }
     }
 }
 
-/* Mobile */
-@media (max-width: 767px) {
-  .navbar-nav { margin-top: 0.5rem; }
-  .navbar-collapse { width: 100%; }
-  .nav-item { margin: 0.2rem 0; }
+/* --- Portfolio --- */
+.section-title {
+  margin: 2rem 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e8e8e8;
+  letter-spacing: .2px;
+}
+
+.portfolio {
+  margin-top: 2rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.project-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+  border-color: rgba(255,255,255,0.14);
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-thumb {
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255,255,255,0.03);
+}
+
+.project-thumb.no-image {
+  background-image: radial-gradient(circle at 30% 30%, rgba(255,255,255,.06), transparent 40%),
+                    radial-gradient(circle at 70% 60%, rgba(0,0,0,.25), transparent 45%);
+}
+
+.project-body {
+  padding: .85rem .9rem 0.5rem;
+}
+
+.project-title {
+  margin: 0 0 .35rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f2f2f2;
+}
+
+.project-desc {
+  margin: 0 0 .6rem;
+  font-size: .95rem;
+  color: #cfcfcf;
+}
+
+.project-tags {
+  display: flex;
+  gap: .4rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 .75rem;
+}
+
+.project-tags li {
+  font-size: .75rem;
+  padding: .18rem .45rem;
+  border-radius: 999px;
+  background: rgba(64,132,255,.12);
+  border: 1px solid rgba(64,132,255,.25);
+  color: #dbe7ff;
+}
+
+.project-actions {
+  display: flex;
+  gap: .6rem;
+  padding: 0 0.9rem 0.9rem;
+}
+
+.btn-link {
+  font-size: .9rem;
+  color: #dbe7ff;
+  text-decoration: none;
+  padding: .35rem .6rem;
+  border-radius: 8px;
+  background: rgba(64,132,255,.10);
+  border: 1px solid rgba(64,132,255,.25);
+  transition: background-color .2s ease, border-color .2s ease;
+}
+
+.btn-link:hover {
+  background: rgba(64,132,255,.18);
+  border-color: rgba(64,132,255,.45);
 }
