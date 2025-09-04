@@ -5,7 +5,15 @@
     "url": "/",
     "repoUrl": "https://github.com/btitzer5/MyWebsite_V1.0",
     "imageUrl": "/img/thumb-portfolio.png",
-    "tech": ["ASP.NET Core", "Razor Pages", "CSS"]
+    "tech": [ "ASP.NET Core", "Razor Pages", "CSS" ]
   }
+  {
+    "title": "Bidding Website",
+    "description": "A simple project bidding web application.",
+    "url": "https://finalproject-k7k0.onrender.com",
+    "tech": [ "ASP.NET Core", "Entity Framework", "SQL", "CSS" ],
+    "repoUrl": "https://github.com/btitzer5/FinalProject"
+  }
+
   
 ]

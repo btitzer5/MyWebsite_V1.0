@@ -42,15 +42,6 @@ namespace MyWebsite_V1._0.Pages
                             RepoUrl = "https://github.com/btitzer5/MyWebsite_V1.0",
                             ImageUrl = "/img/thumb-portfolio.png",
                             Tech = new[] { "ASP.NET Core", "Razor Pages", "CSS" }
-                        },
-                        new Project
-                        {
-                            Title = "Sample Web App",
-                            Description = "Example app showcasing a REST API and frontend.",
-                            Url = "https://example.com",
-                            RepoUrl = "https://github.com/your/repo",
-                            ImageUrl = "",
-                            Tech = new[] { "C#", ".NET", "PostgreSQL" }
                         }
                     };
                 }
