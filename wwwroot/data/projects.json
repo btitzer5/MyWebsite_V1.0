@@ -1,17 +1,23 @@
 [
   {
-    "title": "My Portfolio",
-    "description": "Personal website with glass UI and parallax background.",
+    "title": "My Github",
+    "description": "A link to my GITHUB account.",
     "url": "/",
-    "repoUrl": "https://github.com/btitzer5/MyWebsite_V1.0",
-    "imageUrl": "/img/thumb-portfolio.png",
-    "tech": ["ASP.NET Core", "Razor Pages", "CSS"]
+    "repoUrl": "https://github.com/btitzer5",
+    "imageUrl": "https://github.com/btitzer5",]
   },
   {
     "title": "Bidding Website",
     "description": "A simple project bidding web application.",
     "url": "https://finalproject-k7k0.onrender.com",
     "tech": ["ASP.NET Core", "Entity Framework", "SQL", "CSS"],
-    "repoUrl": "https://github.com/btitzer5/FinalProject"
+    "repoUrl": "https://github.com/btitzer5/FinalProject",
+    "imageUrl": "https://imgur.com/a/907U00c"
+  },
+  {
+  "title": "Spotify API Stat App",
+  "description": "A link to the repo for a Spotify Web App that leverages the Spotify API to show users their Spotify Listening Stats",
+  "url": "https://github.com/btitzer5/SpotifyProject",
+  "tech": ["ASP.NET Core", "Entity Framework", "CSS"]
   }
 ]
