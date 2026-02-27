@@ -101,23 +101,7 @@ p {
   text-decoration: none;
 }
 
-/* Responsive Navbar */
-@media (max-width: 991.98px) {
-  .navbar-toggler {
-    display: block;
-  }
-  .navbar-collapse {
-    width: 100%;
-  }
-  .navbar-nav {
-    flex-direction: column;
-    gap: 0.5rem;
-    background: #fff;
-    border-radius: 0 0 var(--radius, 14px) var(--radius, 14px);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    padding: 0.5rem 0;
-  }
-}
+
 
 /* === Hero Section === */
 .hero {
