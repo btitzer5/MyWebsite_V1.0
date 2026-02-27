@@ -17,9 +17,6 @@
         {
             <article class="project-card">
                 <a class="project-link" href="@(p.Url ?? p.RepoUrl ?? "#")" target="_blank" rel="noopener">
-                    <div class="project-thumb @(string.IsNullOrWhiteSpace(p.ImageUrl) ? "no-image" : "")"
-                         style="@(string.IsNullOrWhiteSpace(p.ImageUrl) ? "" : $"background-image:url('{p.ImageUrl}')")">
-                    </div>
                     <div class="project-body">
                         <h4 class="project-title">@p.Title</h4>
                         @if (!string.IsNullOrWhiteSpace(p.Description))

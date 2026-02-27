@@ -2,7 +2,6 @@
   {
     "title": "My Github",
     "description": "A link to my GITHUB account.",
-    "url": "/",
     "repoUrl": "https://github.com/btitzer5",
     "imageUrl": "https://github.com/btitzer5"
   },
@@ -17,7 +16,7 @@
   {
   "title": "Spotify API Stat App",
   "description": "A link to the repo for a Spotify Web App that leverages the Spotify API to show users their Spotify Listening Stats",
-  "url": "https://github.com/btitzer5/SpotifyProject",
+  "repoUrl": "https://github.com/btitzer5/SpotifyProject",
   "tech": ["ASP.NET Core", "Entity Framework", "CSS"]
   }
 ]
